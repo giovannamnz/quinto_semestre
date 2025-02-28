@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .light-mode {
+            background-color: #fff;
+            color: black;
+        }
+        .navbar {
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-color: #222;
+            border-bottom: 1px solid #444;
+            width: 100%;
+            height: 35px;
+            padding: 0;
+            color: #222;
+        }
+
+        .dropdown{
+            color: #fff;
+        }
+
+        .menu-links {
+            right: 5%;
+            width: 500px;
+            position: fixed;
+            padding: 5px;
+            text-align: right;
+            display: flex;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+        }
+
+        .menu-links a {
+            padding: 5px;
+            margin: 0 10px;
+            text-decoration: none;
+        }  
+
+        .theme-toggle {
+            position: fixed;
+            top: 6px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        
+
+        .section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: var(--bs-light);
+            color: var(--bs-dark);
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+            top: 50px
+
+        }
+
+        .container_card{
+            padding: 120px;
+            top: 400px;
+            position: relative;
+            
+        }
+
+        .dark-mode .card {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-mode .card a {
+        color: #ffc107; 
+        }
+
+         .dark-mode .card a:hover {
+        color: #ffeb3b;
+        }
+
+        .card-img-top {
+        width: 100%;
+        height: 250px; /* Ajuste conforme a necessidade */
+        object-fit: cover;
+    }
+
+
+    </style>
+</head>
+
+<body class="light-mode">
+    <nav class="navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand text-light" href="index.html" style="font-size: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                Landing Page
+            </a>
+            <div class="d-flex align-items-center">
+                <div class="menu-links d-flex align-items-center">
+                    <div class="dropdown">
+                        <a class="nomes" role="button" data-toggle="dropdown">giovanna</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="giovannasobre.html">Sobre</a>
+                            <a class="dropdown-item" href="giovannahobbies.html">Hobbies</a>
+                            <a class="dropdown-item" href="giovannasonhos.html">Sonhos</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nomes" role="button" data-toggle="dropdown">joão</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="joaosobre.html">Sobre</a>
+                            <a class="dropdown-item" href="joaohobbies.html">Hobbies</a>
+                            <a class="dropdown-item" href="joaosonhos.html">Sonhos</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nomes" role="button" data-toggle="dropdown">julia</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="julia.html">Sobre</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="theme-toggle ms-3" id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <img src="https://i.pinimg.com/736x/ec/d5/01/ecd501b6c825dad1794fe873141f9a4c.jpg" class="img-fluid" alt="Imagem responsiva" style="margin-top: 50px; margin-left: 25%;">
+    
+
+
+    <script>
+        document.getElementById("themeToggle").addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+            document.body.classList.toggle("light-mode");
+            this.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
